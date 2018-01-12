@@ -1,0 +1,391 @@
+\documentclass{jsarticle}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{bmpsize}
+\usepackage{here}
+\begin{document}
+\title{実験名}
+\author{有馬海人}
+\maketitle
+    
+
+\section{実験の目的}
+    
+電気回路の中で起こる力学的な現象を観測し、減衰振動の周波数やピーク電圧と時間の関係といった量を求める。
+    
+
+\section{実験の原理}
+    
+電流の方向が1方向に向かって流れるものをといい、このような電源で構成された回路を直流回路と呼ぶ。抵抗値が$R$の抵抗器の両端電圧を$V_R(t)$,流れる電流を$I(t)$とすればオームの法則が成り立つ。
+
+\begin{equation}
+\label{5.1}
+    V_R(t) = RI(t)
+\end{equation}
+
+抵抗値の単位は$\Omega$で表す。コンデンサは充電時間を除けば絶縁体であるコンデンサの静電容量を$C$とすれば、ある時間にコンデンサに蓄えられている電荷$Q(t)$とコンデンサ両端の電圧$V_C(t)$は
+
+\begin{equation}
+\label{5.2}
+    q(t) CV_C(t)
+\end{equation}
+
+という関係を満たす。電荷の単位はCを用い、静電容量の単位にはFを用いる。電流とは単位時間にある面を通過する電荷量であるから、時間変化する電流に対して誘導起電力を生じる。コイルの自己インダクタンスを$L$,ある時間にコイルを流れる電流$I(t)$とすると、誘導起電力$V_L(t)$は
+
+\begin{equation}
+\label{5.3}
+    I(t) = \frac{\textrm d q(t)}{\textrm d t}
+\end{equation}
+
+と表すことができる。コイルは時間変化する電流に対して誘導起電力を生じる。コイルの自己インダクタンスを$L$,ある時間にコイルを流れる電流を$I(t)$とすると、$V_L(t)$は次式で表される。
+
+\begin{equation}
+\label{5.4}
+    V_L(t) = -L\frac{\textrm d I(t)}{\textrm d t}
+\end{equation}
+
+インダクタンスの単位にはHを用いる。
+電池の起電力を$V$とし、ある時刻にコンデンサに蓄えられている電荷を$q(t)$,抵抗値,インダクタンスとコンデンサの静電容量をそれぞれ$R,L,C$とすると、回路に流れる電流$I(t)$は次式を満たす。
+
+\begin{equation}
+\label{5.5}
+    V-L\frac{\textrm{d}I(t)}{\textrm d t} = RI(t) + \frac{q(t)}{C}
+\end{equation}
+
+\ref{5.5}式を解くため、両辺を時間で微分して\ref{5.3}式を用い、$2\gamma = R/L, \omega_0^2 = 1/(LC)$と置けば
+
+\begin{equation}
+\label{5.6}
+    \frac{\textrm d ^2 I(t)}{\textrm d t^2} + 2\gamma\frac{\textrm d I(t)}{\d t} + \omega_0^2 I(t) = 0
+\end{equation}
+
+\ref{5.6}は$I(t)$を$x(t)$とおけば速度に比例する抵抗力が働く単振動の運動方程式と全く同形であり、解は$\gamma$と$\omega_0$の大小関係によって次の3つに分かれていることが知られている。
+
+\begin{enumerate}
+    \item $\gamma<\omega_0$
+    \begin{equation}
+        \label{5.7}
+        I(t) = e^{-\gamma t}(a\sin \omega_1 t + b\cos \omega_1 t)
+    \end{equation}
+       
+    \item $\gamma>\omega_0$
+    \begin{equation}
+        \label{5.8}
+        I(t) = e^{-\gamma t}(ae^{\omega_1 t} + be^{-\omega_1 t})
+    \end{equation}
+    
+    \item $\gamma = \omega_0$
+    \begin{equation}
+        \label{5.9}
+        I(t) = e^{-\gamma t}(at + b)
+    \end{equation}
+\end{enumerate}
+
+ここで、a,bはいずれの場合も初期条件によって決まる定数である。また、角周波数$\omega_1$は、過減衰の場合$\omega_1 = \sqrt{\gamma^2 - \omega_0^2}$,減衰振動の場合$\omega_1 = \sqrt{\omega_0^2 - \gamma^2}$となる。
+
+
+
+\section{実験の方法}
+    
+\subsection{減衰振動の場合}
+\begin{enumerate}
+    \item コイルのインダクタンスをLCRメーターで、コイルの直流抵抗値をテスターで測定した。
+    \item コンデンサーを$22\times10^2$pFのものを選び、テスタで静電容量を測定した。
+    \item 発振器の発振波形を短形波に、発振周波数を100Hzにした。
+    \item 発振器の振幅調整ボリュームを$\frac{1}{2}$程度回した。
+    \item オシロスコープのAUTOボタンを押した。
+    \item 波形が適当な大きさになるように調整した。
+    \item STOPボタンを押した。
+    \item USBメモリに波形を保存した。
+    \item カーソル機能で波形の山の時間と電圧の関係を記録した。
+\end{enumerate}
+
+\subsection{過減衰の場合}
+\begin{enumerate}
+    \item 抵抗値が20k$\Omega$程度の抵抗を選び、テスタで測定した。
+    \item 減衰振動と同様にオシロスコープに一回分の過減衰波形を表示させた。
+    \item 波形をUSBメモリに保存した。
+    \item カソール機能を使い、時間軸1DIV毎に電圧値を記録した。
+\end{enumerate}    
+
+
+\section{結果}
+
+\begin{table}[H]
+    \centering
+    \caption{回路定数の値}
+    \label{kairoteisuu}
+    \begin{tabular}{ll}
+    \hline
+    \multicolumn{2}{c}{回路定数} \\ \hline
+    R/$\Omega$    & 228.75     \\
+    R/k$\Omega$     & 17.95      \\
+    L/H        & 0.05009    \\
+    C/nF       & 2.217     
+    \end{tabular}
+    \end{table}
+
+    \begin{equation}
+    \label{gamma}
+        \gamma = R/2L
+    \end{equation}
+        
+    \begin{equation}
+    \label{omega0}
+        \omega_0 = \sqrt{1/LC}
+    \end{equation}
+    
+であり、$\omega_1$は、過減衰の場合
+
+\begin{equation}
+\label{omega1-1}
+    \omega_1 = \sqrt{\gamma^2 - \omega_0^2}
+\end{equation}
+
+
+減衰振動の場合
+\begin{equation}
+\label{omega1-2}
+    \omega_1 = \sqrt{\omega_0^2 - \gamma^2}
+\end{equation}
+
+である。そして、
+
+\begin{equation}
+\label{T}
+    T = 2\pi/\omega_1
+\end{equation}
+
+
+なのでこれに表\ref{kairoteisuu}の値を代入すると理論上の周期を算出することができる。
+
+\begin{table}[H]
+    \centering
+    \caption{測定から求めた減衰振動の周期と計算から求めた減衰振動の周期}
+    \label{my-label}
+    \begin{tabular}{|l|l|}
+    測定した周期 /s    & 0.0000657 \\
+    計算した理論上の周期  /s & 0.0000661
+    \end{tabular}
+    \end{table}
+
+\begin{table}[H]
+\centering
+\caption{減衰振動における時間と電圧の関係}
+\label{gensuisindouniokerujikan}
+\begin{tabular}{lll}
+\hline
+時間$t_i$/$\mu$s & 電圧$V_i$/V & 電圧比の対数 \\ \hline
+16     & 2.64   & 0      \\
+84     & 2.08   & -0.238 \\
+148    & 1.68   & -0.452 \\
+216    & 1.32   & -0.693 \\
+280    & 1.08   & -0.894 \\
+344    & 0.84   & -1.145 \\
+412    & 0.68   & -1.356 \\
+476    & 0.56   & -1.551
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{過減衰における時間と電圧の関係}
+\label{my-label}
+\begin{tabular}{lll}
+\hline
+    時間$t_i$/$\mu$s & 電圧$V_i$/V & 電圧比の対数 \\ \hline
+    25     & 1.32   & 0      \\
+    50     & 0.72   & -0.606 \\
+    75     & 0.4    & -1.194 \\
+    100    & 0.24   & -1.705 \\
+    125    & 0.16   & -2.110 \\
+    150    & 0.08   & -2.803 \\
+    175    & 0.04   & -3.497 \\
+%    200    & 0      & 0     
+\end{tabular}
+\end{table}
+
+また、減衰振動,過減衰の時間とピーク電圧の関係のグラフの傾きは次のようにして算出した。作成した、時間とピーク電圧の関係のグラフはレポートの最後に付けている。
+
+\begin{equation}
+    減衰振動の場合の傾き = \frac{-0.2307+1.500}{75-450} = -0.00338
+\end{equation}
+
+\begin{equation}
+    過減衰の場合の傾き = \frac{-0.1538+4.000}{30-200} = -0.022262
+\end{equation}
+
+\begin{table}[H]
+\centering
+\caption{回路定数から算出した値とグラフから求めた傾き}
+\label{my-label}
+\begin{tabular}{|l|l|}
+$\gamma$ /s        & 2283     \\
+$\gamma - \omega_1$/s & 27192    \\
+減衰振動の場合のグラフの傾き    & -0.00338 \\
+過減衰の場合のグラフの傾き     & -0.02262
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[H]
+    \begin{tabular}{cc}
+      %---- 最初の図 ---------------------------
+      \begin{minipage}[t]{0.45\hsize}
+        \centering
+        \includegraphics[keepaspectratio, scale=0.7]{F0002TEK.BMP}
+        \caption{減衰振動の波形}
+        \label{ラベル1}
+      \end{minipage} &
+      %---- 2番目の図 --------------------------
+      \begin{minipage}[t]{0.45\hsize}
+        \centering
+        \includegraphics[keepaspectratio, scale=0.7]{F0003TEK.BMP}
+        \caption{過減衰の波形}
+        \label{ラベル2}
+      \end{minipage}
+      %---- 図はここまで ----------------------
+    \end{tabular}
+  \end{figure}
+
+%\section{課題}
+    
+%    課題
+    
+\section{考察}
+    
+%    考察
+%抵抗値をあげると過減衰の収束が早まる。ガンマで速さが決まることを言わなくてはいけないが。抵抗値をあげても、波の周波数は変わらない。
+%グラフの傾きの単位は/sである。これと同じ単位を持つ値は$\gamma$である。これらの値同士の関係を考察する。
+\subsection{抵抗値を変えた時について}
+
+\subsubsection{減衰振動の場合}
+私は抵抗値を変えた場合は周期は大きくは変わらないと考察する。その理由はナノ単位であるコンデンサの静電容量を分母に据えた$\omega_0^2$と比較すると、電気抵抗が変わっても$\gamma^2$の値は$\omega_0^2$と比べると非常に小さい。したがって、\ref{omega1-2}式より、$\omega_1$の値に対して抵抗の値の影響は非常に小さい。よって、抵抗値を変えた場合でも減衰振動の周期は大きくは変わらないと考察する。また、\ref{5.7}式より電流は$\gamma$の値が大きいほど他の値に関係なく早く０に向かって収束していくことがわかる。さらに、\ref{gamma}式より$\gamma$の値は抵抗値の大きさに比例することがわかる。そのことから、抵抗値が大きいほど減衰振動の収束は早くなり、抵抗の値が小さいほど減衰振動の収束は遅くなると考察する。
+
+\subsubsection{過減衰の場合}
+\ref{5.8}式を用いて、上記の減衰振動の$\gamma$考え方を進めていくと、同様に抵抗値の大きさが大きいほど過減衰の波形の収束は早くなり、抵抗値の大きさが小さいほど過減衰の波形の収束は遅くなると考察する。
+
+
+\begin{thebibliography}{99}
+    \bibitem{UEC} 共通教育部自然科学部会（物理）、『基礎科学実験A（物理学実験）平成29年（2017年）版』
+\end{thebibliography}
+
+参考にしたWEBサイトとして\\
+
+本実験のwebclass\\
+\url{https://webclass.cdel.uec.ac.jp/webclass/show_frame.php?set_contents_id=52665ccfc642c81a39d28bcbb1b94c43&language=JAPANESE&acs_=055ecb48}\\
+
+がある。
+
+\newpage
+
+\section{再レポート}
+
+\subsection{結果の部分}
+
+\ref{kairoteisuu}表の回路定数を用いて、\ref{gamma}~\ref{T}式に代入することで計算から求めた減衰振動の周期を求めることができる。また、測定から求めた周期は\ref{gensuisindouniokerujikan}表より求めた。
+
+\begin{table}[H]
+    \centering
+    \caption{測定から求めた減衰振動の周期と計算から求めた減衰振動の周期}
+    \label{my-label}
+    \begin{tabular}{|l|l|}
+    測定した周期 /s    & 0.0000657 \\
+    計算した理論上の周期  /s & 0.0000661
+    \end{tabular}
+    \end{table}
+
+また、下表は実験方法の3.1の9において記録したもののデータである。
+
+\begin{table}[H]
+\centering
+\caption{減衰振動における時間と電圧の関係}
+\label{my-label}
+\begin{tabular}{lll}
+\hline
+時間$t_i$/$\mu$s & 電圧$V_i$/V & 電圧比の対数 \\ \hline
+16     & 2.64   & 0      \\
+84     & 2.08   & -0.238 \\
+148    & 1.68   & -0.452 \\
+216    & 1.32   & -0.693 \\
+280    & 1.08   & -0.894 \\
+344    & 0.84   & -1.145 \\
+412    & 0.68   & -1.356 \\
+476    & 0.56   & -1.551
+\end{tabular}
+\end{table}
+
+同様に、下表は実験方法の3.2の4において記録したもののデータである。
+
+\begin{table}[H]
+\centering
+\caption{過減衰における時間と電圧の関係}
+\label{my-label}
+\begin{tabular}{lll}
+\hline
+    時間$t_i$/$\mu$s & 電圧$V_i$/V & 電圧比の対数 \\ \hline
+    25     & 1.32   & 0      \\
+    50     & 0.72   & -0.606 \\
+    75     & 0.4    & -1.194 \\
+    100    & 0.24   & -1.705 \\
+    125    & 0.16   & -2.110 \\
+    150    & 0.08   & -2.803 \\
+    175    & 0.04   & -3.497 \\
+%    200    & 0      & 0     
+\end{tabular}
+\end{table}
+
+また、減衰振動,過減衰の時間とピーク電圧の関係のグラフの傾きは次のようにして算出した。作成した、時間とピーク電圧の関係のグラフはレポートの最後に付けている。
+
+\begin{equation}
+    減衰振動の場合の傾き = \frac{-0.2307+1.500}{75-450} = -0.00338
+\end{equation}
+
+\begin{equation}
+    過減衰の場合の傾き = \frac{-0.1538+4.000}{30-200} = -0.022262
+\end{equation}
+
+上の２式より求めた傾きの分母の単位は$\mu s$のため、それぞれの傾きの値に$10^6$を掛ることで単位が$S$の傾きの値を出すことができる。
+
+\begin{table}[H]
+\centering
+\caption{回路定数から算出した値とグラフから求めた傾き}
+\label{kairaoteisuukarasanshutusita}
+\begin{tabular}{|l|l|}
+$\gamma$ /s        & 2283     \\
+$\gamma - \omega_1$/s & 27192    \\
+減衰振動の場合のグラフの傾きの大きさ    & 3380 \\
+過減衰の場合のグラフの傾きの大きさ     & 22620
+\end{tabular}
+\end{table}
+
+\subsection{再レポート部分の考察}
+
+回路定数から算出した値とグラフから求めた傾きについて考察していく。
+まず、回路定数から算出した傾きとグラフから求めた傾きについての相対誤差を求める。この際、理論値とする方の傾きは回路定数から算出した傾きである。
+相対誤差を算出する際に次の式を利用した。また、計算に利用した値は\ref{kairaoteisuukarasanshutusita}表の値を利用した。
+
+\begin{equation}
+    \label{soutaigosa}
+    相対誤差 = \frac{|測定値-理論値|}{理論値}
+\end{equation}
+
+\begin{table}[H]
+    \centering
+    \caption{それぞれの場合における相対誤差}
+    \label{my-label}
+    \begin{tabular}{|l|l|l|}
+    \hline
+         & 過減衰の場合 & 臨界振動の場合 \\ \hline
+    相対誤差 & 0.3245 & 0.2021  \\ \hline
+    \end{tabular}
+    \end{table}
+
+上表の相対誤差から、それぞれ一割超えてしまっている。
+
+この原因を考察する。
+原因としては計算時に盛り込んだテスターなどの分の回路定数が違っていることであると考察する。その理由としては、あらかじめ盛り込んだ回路定数が実際と異なる場合、実験によって得られた測定結果と計算によって得られた結果は当然異なってしまうからであると考察する。これを解決するには何らかの手段を持ってテスターなどの装置の回路定数を測ることであると考察する。
+
+
+\end{document}

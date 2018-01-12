@@ -1,0 +1,262 @@
+\documentclass{jsarticle}
+\usepackage{booktabs}
+\usepackage{here}
+\begin{document}
+\title{ヤング率}
+\author{有馬海人}
+\maketitle
+
+
+\section{実験の目的}
+
+
+引っ張り応力に対する弾性変形の係数であるヤング率をいくつかの材料について測定する。
+
+\section{実験の原理}
+
+微小な変形量を測る方法の一つに光の梃子を使い、拡大して測定する方法がある。この実験では光源に小型の半導体レーザーを用いて光梃子の方法により、棒の僅かなたわみを測り、材料の基本的な弾性定数である、ヤング率を求める。\\
+\par 棒の間隔$l$を二つのナイフエッジで支え、支点間の中点に荷重を加えると棒は湾曲する。このような変形を’たわみ’という。長方形(縦a,横b)の断面を有する棒に荷重mgを加えた時にたわみによる中点の降下量$h$は次の式で表される。
+
+\begin{equation}
+    h = \frac{l^3}{4a^3bE}mg
+\end{equation}
+
+ここで$E$が棒材料のヤング率である。微小な降下量$h$は光の梃子(鏡 M,　レーザー L,　及びスケール Sより構成される)を用いて拡大して観測する。たわみによる鏡の傾き角を$\theta$,鏡台の脚間の有効距離を$r$とすると
+
+
+\begin{equation}
+    h = r\sin \theta \sim r\theta
+\end{equation}
+
+が成り立つ。ただし$\theta$は微小なので$\sin \theta \sim \theta$の近似を使った。鏡で反射したレーザー光線は入射光線と角度$2\theta$傾く。微小角の近似$\tan 2\theta \sim 2\theta $を使うと、荷重をかける前後のスケールの読み$S_0,S$の差は
+
+\begin{equation}
+    S - S_0 = d \tan(2\theta) \sim 2d\theta
+\end{equation}
+
+である。$d$は鏡とスケール間の距離である。したがって
+
+\begin{equation}
+    h = r\theta = r\frac{S - S_0}{2d}
+\end{equation}
+
+の関係が成り立つ。以上からヤング率は次の式から計算される。
+
+\begin{equation}
+\label{yanguritu}
+    E =\frac{g}{2}\frac{l^3d}{a^3br}\frac{\Delta m}{\Delta S}
+\end{equation}
+
+\section{実験の方法}
+
+\begin{enumerate}
+    \item　ナイフエッジ間の距離$l$を計測した。
+    \item　重りの質量$m$を計測した。
+    \item　試料棒のa,bを計測した。
+    \item　鏡Mの前脚に荷重を載せるハンガーをつけ、これを試料棒の上、ナイフエッジの中点にセットした。
+    \item　荷重をかけていないときは、レーザー,鏡,レーザー光線とその反射光線は全て大体同一平面になるように設定した。
+    \item　スケールから鏡までの距離$d$を計測した。
+    \item　まず重りを載せていないときのスケールの目盛$S_0$を読む。重りを一個ずつ載せるたびにスケールの目盛$S$を読み取り、重りの質量とともに記録した。
+    \item　これまでの手順を軟鉄,軟鉄の縦横を変えたもの,ステンレス,真鍮の順に行った。
+    \item　鏡台の脚間の有効距離$r$は紙の上に三脚を押し付けて測定した。
+\end{enumerate}
+
+
+\section{測定結果}
+
+\ref{yanguritu}式よりヤング率の合成不確かさを求める。
+
+\begin{equation}
+    \label{gouseihutasikasa}
+    \Delta E = \sqrt{({\frac{\delta E}{\delta g}})^2{\Delta g}^2 + ({\frac{\delta E}{\delta l}})^2{\Delta l}^2 + ({\frac{\delta E}{\delta d}})^2{\Delta d}^2  + (\frac{\delta E}{\delta a})^2{\Delta a}^2 + (\frac{\delta E}{\delta b})^2{\Delta b}^2 + (\frac{\delta E}{\delta r})^2{\Delta r}^2 + (\frac{\Delta E}{\frac{\Delta m}{\Delta S}})^2(\frac{\Delta m}{\Delta S})^2} 
+\end{equation}
+
+また、それぞれの偏微分の式の詳細は以下のようになる。
+
+\begin{equation}
+    \frac{\delta E}{\delta g} = \frac{1l^3d\Delta m}{2a^3br\Delta S}
+\end{equation}
+
+\begin{equation}
+    \frac{\delta E}{\delta l} = \frac{3gl^2d\Delta m}{2a^3br\Delta S}
+\end{equation}
+
+\begin{equation}
+    \frac{\delta E}{\delta d} = \frac{gl^3\Delta m}{2a^3br\Delta S}
+\end{equation}
+
+\begin{equation}
+    \frac{\delta E}{\delta a} = \frac{-3gl^3d\Delta m}{2bra^4\Delta S}
+\end{equation}
+
+\begin{equation}
+    \frac{\delta E}{\delta b} = \frac{-gl^3d\Delta m}{2a^3br^3\Delta S}
+\end{equation}
+
+\begin{equation}
+    \frac{\delta E}{\delta r} = \frac{-gl^3d\Delta m}{2a^3br^2\Delta S}
+\end{equation}
+
+\begin{equation}
+    \frac{\delta E}{ \delta\frac{\Delta m}{\Delta S}} = \frac{-gl^3d}{2a^3br}
+\end{equation}
+
+ヤング率を計算するのに使用した値を以下の表にまとめる。
+
+\begin{table}[H]
+    \centering
+    \caption{使用した値}
+    \label{my-label}
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+              & 軟鉄     & 軟鉄(縦横反対) & ステンレス  & 真鍮     \\ \hline
+    重力加速度g    & \multicolumn{4}{c|}{9.7979}         \\ \hline
+    $\bar r $     & \multicolumn{4}{c|}{0.0363}         \\ \hline
+    $\bar l $     & \multicolumn{4}{c|}{0.4006}         \\ \hline
+    $\bar d $ & 0.9123 & 0.9128   & 0.9113 & 0.9092 \\ \hline
+    $\bar a $     & 0.0079 & 0.0189   & 0.0080 & 0.0051 \\ \hline
+    $\bar b $     & 0.0189 & 0.0079   & 0.0159 & 0.0159 \\ \hline
+    $\frac{\Delta m}{\Delta s}$     & 0.4205 & 2.3782   & 0.5047 & 0.3173 \\ \hline
+    \end{tabular}
+    \end{table}
+
+実際に上表の値を使用して\ref{yanguritu}式より計算したヤング率は下表のようになった
+
+\begin{table}[H]
+    \centering
+    \caption{ヤング率の計算結果}
+    \label{my-label}
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+      & 軟鉄           & 軟鉄(縦横反対)           & ステンレス  & 真鍮          \\ \hline
+    E /Pa & $202\times 10^9$ & $187\times10^9$ & $177 \times 10^9$ & $84.0 \times 10^9$ \\ \hline
+    \end{tabular}
+    \end{table}
+
+ヤング率の不確かさを求める際に追加で使用した値を下表にまとめた。
+
+    \begin{table}[H]
+        \centering
+        \caption{それぞれの値における不確かさ}
+        \label{my-label}
+        \begin{tabular}{|l|l|}
+        \hline
+        $\Delta g$       & 0.000001 \\ \hline
+        $\Delta l$       & 0.0001   \\ \hline
+        $\Delta d$       & 0.0001   \\ \hline
+        $\Delta a$       & 0.000001 \\ \hline
+        $\Delta b$       & 0.000001 \\ \hline
+        $\Delta r$       & 0.0001   \\ \hline
+        $\Delta\frac{Dm}{Ds}$ & 0.1      \\ \hline
+        \end{tabular}
+        \end{table}
+
+\ref{gouseihutasikasa}式を使用して計算した合成不確かさの値は下表のようになった。
+
+\begin{table}[H]
+    \centering
+    \caption{それぞれの試料における合成不確かさ}
+    \label{my-label}
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+       & 軟鉄        & 軟鉄(縦横反対)        & ステンレス    & 真鍮        \\ \hline
+    $\Delta E$ /Pa & $5\times 10^9$  & $5\times 10^9$ & $1\times 10^9$ & $5\times 10^9$ \\ \hline
+    \end{tabular}
+    \end{table}
+
+以上の表より測定したヤング率の値をした表にまとめる
+
+\begin{table}[H]
+    \centering
+    \caption{それぞれの試料棒でのヤング率}
+    \label{my-label}
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+         & 軟鉄                         & 軟鉄(縦横反対)                         & ステンレス                      & 真鍮                         \\ \hline
+    ヤング率 /Pa & $(202\pm 5)\times 10^9$ & $(187\pm 5)\times 10^9$ & $(177\pm 1) \times 10^9$ & $(84.0\pm 5)^9$ \\ \hline
+    \end{tabular}
+    \end{table}
+
+\section{課題}
+
+\subsection{(1)について}
+
+測定結果の項で計算したので省略する。
+
+\subsection{(2)について}
+
+不確かさについては測定結果の項で計算したので省略する。
+
+理科年表よりヤング率の文献値は下表のようになった。
+
+\begin{table}[H]
+    \centering
+    \caption{ヤング率の文献値}
+    \label{my-label}
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+         & 軟鉄          & ステンレス       & 真鍮         \\ \hline
+    ヤング率 /Pa & $211.4 x 10^9$ & $215.3 x 10^9$ & $100.6 x10^9$ \\ \hline
+    \end{tabular}
+    \end{table}
+
+実験値と文献値の比較は考察の項で行う。
+
+\subsection{(4)について}
+
+理科年表より弾性のつく定数は、ずれ弾性率,体積弾性率があった。今回の実験において使用した試料におけるそれぞれの値を下表にまとめた。
+
+\begin{table}[H]
+    \centering
+    \caption{調べた値}
+    \label{my-label}
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+          & 軟鉄    & ステンレス & 真鍮    \\ \hline
+    ずれ弾性率 & 0.293 & 0.293 & 0.35  \\ \hline
+    体積弾性率 /GPa & 169.8 & 166   & 111.8 \\ \hline
+    \end{tabular}
+    \end{table}
+
+\section{考察}
+
+実験結果と文献値の比較を行う。
+今回の実験では全ての試料について文献値の値が不確かさを含めた実験値の範囲に収まらなかった。
+また、それぞれの試料において相対誤差を求める。
+
+\begin{equation}
+    \label{soutaigosa}
+    相対誤差 = \frac{|測定値-理論値|}{理論値}
+\end{equation}
+
+相対誤差は上式より求められるので結果を下表にまとめた。
+
+\begin{table}[H]
+    \centering
+    \caption{それぞれの試料における相対誤差}
+    \label{soutaihyou}
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+         & 軟鉄           & 軟鉄(縦横反対)           & ステンレス        & 真鍮          \\ \hline
+    相対誤差 & 0.044 & 0.11 & 0.17 & 0.16 \\ \hline
+    \end{tabular}
+    \end{table}
+
+\ref{soutaihyou}表より、一番誤差が小さかったものは軟鉄を他の２つと同じ向きで行なった場合であった。このことから、この軟鉄の測定は非常に良い結果であると考察する。
+
+残りの測定結果は文献値と離れてしまったため、その原因を考察する。私はその原因がつあると考察する。
+1つ目の原因としてはレーザー光が厚いことである。レーザー光が厚いのでスケールの目盛に誤差が生じるためであると考察する。
+2つ目の原因としては重りを乗せた時の揺れであると考察する。この揺れが非常に小さくともスケーラ上では拡大されるため、なかなか正しい値を観測することが難しくなるからであると考察する。
+
+1つ目の原因を解消するには次の方法があると考察する。それはレーザー光の厚さを絞ることである。こうすることで細いレーザーになり、スケーラのメモリを見やすくなると考察するからである。
+2つ目の原因を解消するには次の方法があると考察する。それはそれぞれの重りを重くすることである。それを行うことで、重りの重量より、揺れが小さくなる。また、重りの数が多くなるとそのぶん揺れをより小さくすることができると考察する。
+
+\begin{thebibliography}{99}
+    \bibitem{UEC} 共通教育部自然科学部会（物理）、『基礎科学実験A（物理学実験）平成29年（2017年）版』
+\end{thebibliography}
+
+
+\end{document}
+
+　
+
