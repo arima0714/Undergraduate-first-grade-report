@@ -1,6 +1,7 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2017.11.19)  12 JAN 2018 15:53
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2017.11.19)  12 JAN 2018 18:48
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **contents.tex
 (./contents.tex
@@ -118,33 +119,33 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 5.76599pt on input line 8.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 10.
+(Font)              scaled to size 13.83836pt on input line 11.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 10.
+(Font)              scaled to size 13.83836pt on input line 11.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 10.
+(Font)              scaled to size 13.83836pt on input line 11.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 10.
+(Font)              scaled to size 13.83836pt on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 16.
+(Font)              <7> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 16.
+(Font)              <5> on input line 17.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 16.
+(Font)              scaled to size 6.72699pt on input line 17.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 16.
+(Font)              scaled to size 4.805pt on input line 17.
 
 [1
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 43.
+(Font)              scaled to size 11.53198pt on input line 45.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 43.
+(Font)              scaled to size 11.53198pt on input line 45.
  [2] [3] (./contents.aux) ) 
 Here is how much of TeX's memory you used:
- 661 strings out of 493642
- 7588 string characters out of 6148747
+ 662 strings out of 493642
+ 7596 string characters out of 6148747
  67992 words of memory out of 5000000
  4311 multiletter control sequences out of 15000+600000
  13701 words of font info for 61 fonts, out of 8000000 for 9000
