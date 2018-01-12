@@ -1,7 +1,6 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2017.11.19)  11 JAN 2018 22:19
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2017.11.19)  12 JAN 2018 15:53
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **contents.tex
 (./contents.tex
@@ -137,14 +136,19 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 
 [1
 
-] [2] (./contents.aux) ) 
+]
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 43.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 43.
+ [2] [3] (./contents.aux) ) 
 Here is how much of TeX's memory you used:
  661 strings out of 493642
- 7581 string characters out of 6148747
- 66992 words of memory out of 5000000
- 4310 multiletter control sequences out of 15000+600000
- 13113 words of font info for 58 fonts, out of 8000000 for 9000
+ 7588 string characters out of 6148747
+ 67992 words of memory out of 5000000
+ 4311 multiletter control sequences out of 15000+600000
+ 13701 words of font info for 61 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 23i,7n,20p,321b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23i,7n,20p,613b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on contents.dvi (2 pages, 3604 bytes).
+Output written on contents.dvi (3 pages, 7056 bytes).
