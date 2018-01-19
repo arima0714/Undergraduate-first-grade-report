@@ -1,7 +1,6 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2017.11.19)  18 JAN 2018 13:41
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2017.11.19)  18 JAN 2018 23:25
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **contents.tex
 (./contents.tex
@@ -144,8 +143,8 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 45.
  [2] [3] [4] (./contents.aux) ) 
 Here is how much of TeX's memory you used:
- 662 strings out of 493642
- 7596 string characters out of 6148747
+ 661 strings out of 493642
+ 7588 string characters out of 6148747
  68992 words of memory out of 5000000
  4311 multiletter control sequences out of 15000+600000
  13701 words of font info for 61 fonts, out of 8000000 for 9000
