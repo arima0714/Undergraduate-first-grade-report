@@ -2,6 +2,7 @@
 \usepackage{booktabs}
 \usepackage{here}
 \usepackage{url}
+\usepackage{lscape}
 \begin{document}
 \title{光のスペクトル}
 \author{有馬海人}
@@ -45,34 +46,217 @@
 
 ここで$\lambda$は光の波長,$d$は回折格子の格子の間隔,$N = 1/d$はdの逆数で単位長さあたりの格子の数である。回折格子の特性を表す時は$d$よりも$N$を用いるのが普通である。上式は隣接するスリットを通った光が強め合う条件である。色々な波長を含む光を回折格子に当てると回折光は分かれ、入射した光のスペクトルが観測される。次数が同じ回折行を調べると波長の長い赤いスペクトル線の方が波長の短い青いスペクトル線よりも回折角が大きいことに注意する。
 
-\begin{equation}
-    実験の原理
-\end{equation}
 
 
 \section{実験の方法}
 
-実験の方法
+\subsubsection{視差をなくすための調整}
+\begin{enumerate}
+    \item 十時線がはっきり見えるように接眼レンズを前後に動かし、ピントを合わせた。
+    \item スリットの輪郭がはっきり見えるように伸縮ネジ$R_1$を動かした。
+\end{enumerate}
+
+\subsubsection{回折格子の置き方}
+\begin{enumerate}
+    \item 目盛盤を固定し望遠鏡を可動にした。
+    \item 回折格子を回転台に載せ、情報から見て回折格子の格子面をコリメータの軸と可能な限り垂直になるように回転台を回した。
+\end{enumerate}
+
+\subsubsection{回折角の測定}
+\begin{enumerate}
+    \item スペクトル線を発見したら、スペクトル線を正しく十字線の交点に合わせその時の目盛を読み取った。
+    \item 種々のスペクトル線の一次、二次の回折角$\theta_1,\theta_2$を測定していった。
+\end{enumerate}
+
+
 
 \section{測定結果}
 
-測定結果
+
+\begin{table}[H]
+\centering
+\caption{$\textrm{N}_\textrm{a}$}
+\label{my-label}
+\begin{tabular}{|c|c|c|}
+\hline
+     & θL      & θR      \\ \hline
+橙 一次 & 345°00' & 303°30' \\ \hline
+橙 二次 & 369°46' & 279°37' \\ \hline
+橙 一次 & 344°57' & 303°33' \\ \hline
+橙 二次 & 369°40' & 279°42' \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{H}
+\label{my-label}
+\begin{tabular}{|c|c|c|}
+\hline
+     & θL      & θR      \\ \hline
+赤　一次 & 346°01' & 301°03' \\ \hline
+赤　二次 & 376°57' & 272°57' \\ \hline
+緑　一次 & 341°12' & 307°17' \\ \hline
+緑　二次 & 360°10' & 288°46' \\ \hline
+青　一次 & 339°19' & 309°06' \\ \hline
+青　二次 & 355°46' & 293°00' \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{$\textrm{H}_\textrm{g}$}
+\label{my-label}
+\begin{tabular}{|c|c|c|}
+\hline
+      & θL      & θR      \\ \hline
+赤　一次  & 347°00' & 301°33' \\ \hline
+赤　二次  & 375°28' & 274°16' \\ \hline
+緑　一次  & 341°58' & 306°27' \\ \hline
+緑　二次  & 362°08' & 286°56' \\ \hline
+薄青　一次 & 340°56' & 307°29' \\ \hline
+薄青　二次 & 359°43' & 289°14' \\ \hline
+濃青　一次 & 340°29' & 307°56' \\ \hline
+濃青　二次 & 358°37' & 290°16' \\ \hline
+紫　一次  & 339°23' & 308°50' \\ \hline
+紫　二次  & 356°22' & 292°26' \\ \hline
+\end{tabular}
+\end{table}
 
 \section{課題}
 
-課題
+\subsection{(1)}
+
+まず、次の式からそれぞれの測定での$N_i$を求める。
+
+\begin{equation}
+    N_i = \frac{\sin{\theta_m}}{m\lambda_i}
+\end{equation}
+
+この時の不確かさは次の式を用いて算出した。ここでは$\Delta \theta_m = 0.01$,$\Delta \lambda_i = 0.1$として計算した。
+
+\begin{equation}
+    \Delta N_i = N_i\cdot\sqrt{(\frac{\cos{\theta_m}}{\sin{\theta_m}}^2) + (\frac{\Delta\lambda_i}{\lambda_i})^2}
+\end{equation}
+
+上式の計算結果は次の表のようになった。
+
+\begin{table}[H]
+\centering
+\caption{測定結果から求められた格子定数とその不確かさ}
+\label{my-label}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+         & D1 橙 一次 & D1 橙 一次 & D2 橙 一次 & D2 橙 一次 \\ \hline
+N\_i /mm & $599 \pm 15$     & $599 \pm 6$     & $599 \pm 16$     & $600 \pm 6$     \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{(2)}
+
+スペクトル線の波長を求めるために次式を用いた。
+
+\begin{equation}
+    \lambda = \frac{\sin{\theta_m}}{mN}
+\end{equation}
+
+また、この時の不確かさは次の式を用いて計算した。
+
+\begin{equation}
+    \Delta \lambda = \lambda\cdot\sqrt{(\frac{\cos{\theta_m}}{\sin{\theta_m}}^2) + (\frac{\Delta N}{N})^2}
+\end{equation}
+
+
+\begin{table}[]
+\centering
+\caption{水素のスペクトルの波長}
+\label{my-label}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+          & 赤　一次  & 赤　二次  & 緑　一次  & 緑　二次  & 青　一次  & 青　二次  \\ \hline
+$\lambda/10^{-7}$mm & $6.374\pm0.002$ & $6.567\pm0.001$ & $4.861\pm0.001$ & $4.863\pm0.001$ & $4.344\pm0.002$ & $4.340\pm0.001$ \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \caption{カドミウムのスペクトルの波長-1}
+    \label{my-label}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+             & 赤　一次  & 赤　二次  & 緑　一次  & 緑　二次  & 薄青　一次 & 薄青　二次 \\ \hline
+    $\lambda/10^{-7}$mm & $6.439 \pm0.001$ & $6.440\pm0.002$ & $5.08\pm0.001$ & $5.085\pm0.002$ & $4.796\pm0.001$ & $4.809\pm0.002$ \\ \hline
+    \end{tabular}
+    \end{table}
+
+    \begin{table}[H]
+        \centering
+        \caption{カドミウムのスペクトルの波長-2}
+        \label{my-label}
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline
+                 & 濃青　一次 & 濃青　二次 & 紫　一時  & 紫　二次  \\ \hline
+        $\lambda/10^{-7}$mm & $4.671\pm0.002$ & $4.681\pm0.001$ & $4.391\pm0.002$ & $4.412\pm0.001$ \\ \hline
+        \end{tabular}
+        \end{table}
+
+文献値は次のようなものであった。
+
+\begin{table}[H]
+    \centering
+    \caption{水素のスペクトルの波長の文献値}
+    \label{my-label}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+              & 赤　一次           & 赤　二次          & 緑　一次           & 緑　二次          & 青　一次          & 青　二次          \\ \hline
+    $\lambda$文献値$ /10^{-7}$mm & \multicolumn{2}{c|}{6.5627110} & \multicolumn{2}{c|}{4.8612870} & \multicolumn{2}{c|}{4.340472} \\ \hline
+    \end{tabular}
+    \end{table}
+
+\begin{landscape}
+\begin{table}[H]
+    \centering
+    \caption{カドミウムのスペクトルの波長の文献値}
+    \label{my-label}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+                 & 赤　一次           & 赤　二次          & 緑　一次           & 緑　二次          & 薄青　一次          & 薄青　次          & 濃青　一次          & 濃青　二次         & 紫　一時          & 紫　二次         \\ \hline
+    $\lambda$文献値$ /10^{-7}$mm & \multicolumn{2}{c|}{6.4402480} & \multicolumn{2}{c|}{5.0872379} & \multicolumn{2}{c|}{4.8012521} & \multicolumn{2}{c|}{4.6794581} & \multicolumn{2}{c|}{4.41563} \\ \hline
+    \end{tabular}
+    \end{table}
+\end{landscape}
+
+\subsection{(3)}
+
+受験期には光の波長は「赤橙黄緑青紫」の順番に波長が長い順に並んでいると教わったが今回の実験結果から実際に、光の波長は先ほどの順番と同じように波長が長い順に並んでいるという関係を確認することができた。
 
 \section{考察}
 
-考察
+\subsection{課題(1)}
 
+課題(1)で求めた格子定数は、基礎科学実験AのWEBサイトより600であるということである。従って表4より、測定結果から得られた格子定数はどの値もこの格子定数600という値を不確かさの範囲の中に収めている。よって、今回の実験において使用した格子定数の値は非常に良い精度で求めることができたと考察する。
 
+\subsection{課題(2)}
 
+\subsubsection{水素のスペクトルの波長について}
 
+今回の実験では実験結果から求められた値とその不確かさの範囲の中に文献値が収まったスペクトルはなかった。しかし、この実験結果は不確かさの桁である小数第3位と同じ桁での誤差なので悪くない精度で値を出すことができたと考察する。
 
+\subsubsection{カドミウムのスペクトルの波長について}
+
+今回の実験では実験結果から求められた値とその不確かさの範囲の中に文献値が収まったスペクトルは赤色の２次だけであった。また、水素のスペクトルの波長と同じくらい正確に測定できたスペクトルが大半であったが、薄青色のスペクトルはかなりズレていると考察できる。
+
+\subsection{全般について}
+以上の結果となったがこのような結果となった原因としては二つあると考察する。
+1つ目は実験手順の中に垂直にするというものがあったが、これは光源となる管と実験装置を最初から垂直に固定してあるべきだと考察する。なぜなら、管の根本部分のみ交換可能とすると、垂直になっていないがために微調整で必要とされる時間をかなり削減できる上に、わずかな誤差の調整に時間をかけることができるのでより、正確な精度で測定できると考察するからである。
+2つ目はやはり、焦りである。自分たちは最初の微調整で大幅におくれてしまったため、かなり実験中に焦りが生じてしまった。したがって、慎重に実験することでもまた、より高い精度で測定できると考察する。
 
 \begin{thebibliography}{99}
     \bibitem{UEC} 共通教育部自然科学部会（物理）、『基礎科学実験A（物理学実験）平成29年（2017年）版』
 \end{thebibliography}
+
+基礎科学実験Aの資料のページ
+url{http://physics.e-one.uec.ac.jp/theme.html}
 
 \end{document}
