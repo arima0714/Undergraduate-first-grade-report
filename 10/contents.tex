@@ -17,10 +17,13 @@
     \par このような短い光パルスを観測するためには応答時間が1ns以下の光検出器を使用しなければならない。ここではpinフォトダイオードを用いる。受光面に当たった光パルスと同じ波形の電気信号を出力する。\\
     \par 測定は、半導体レーザーからの、繰り返し周波数やく15MHzの光パルス列を数m離れたプリズム反射機で反射させて光検出器に導く。光検出器の出力信号をオシロスコープに導き、2つの光パルス時間間隔$T$を測定する。一方、プリズム反射機または半透明鏡で反射して光検出器に入る光路の差$L$を測定する。光速度$c$は次の式で計算される。
 \begin{equation}
+\label{lighrningspeed}
     c = \frac{L}{T}
 \end{equation}
 
 \section{実験の方法}
+
+\subsection{光速度の測定}
 
 \subsubsection{$T$の観測}
 \begin{enumerate}
@@ -39,16 +42,109 @@
 \begin{enumerate}
     \item 半透明鏡からプリズム反射機のプリズム面までの距離$d_1$,光検出器からプリズム面までの距離$d_2$,半透明鏡から光検出器までの距離$d_3$を巻尺を使って測定した。
     \item プリズム反射機の第一プリズムに入ってから二番目のプリズムから出てくるまでの幾何学的な光路の長さは、光がどこに入ろうとも$l_0$であるのに注意しながら、$l_0$を測定した。
-    \item 
+\end{enumerate}
+
+\subsubsection{水中の場合の測定}
+\begin{enumerate}
+    \item 光路$d_2$に水の入ったガラス管を挿入した。
+    \item 先ほどと同様に時間間隔$T$
+\end{enumerate}
+
+\subsection{同軸ケーブルを伝わる信号速度の測定}
+\begin{enumerate}
+    \item オシロスコープの電源を入れた。
+    \item パルス発生器の電源を入れた。
+    \item 同軸ケーブルの終端に付いているインピーダンス整合機をはずした。
+    \item 直接来たパルスと終端の反射によって生じたパルスとの間の時間間隔$T$を測定した。
+    \item 同軸ケーブルを取り外してその長さ$L$を測定した。
 \end{enumerate}
 
 \section{測定結果}
 
-測定結果
+半透明鏡からプリズム反射機のプリズム面までの距離を$d_1$、光検出器からプリズム面までの距離を$d_2$、半透明鏡から光検出器までの距離を$d_3$とする。また、光路の差$L$は次の式から出した。ガラスの屈折率は1.5としている。
+
+\begin{equation}
+    L = d_1 + d_2 - d_3 + 1.5(l_0 - l_1) + l_1
+\end{equation}
+
+\begin{table}[H]
+\centering
+\caption{光速度の測定における測定結果}
+\label{one}
+\begin{tabular}{|l|l|}
+\hline
+$T $ /s & 17.9    \\ \hline
+$d_1$ /cm & 249.6   \\ \hline
+$d_2$ /cm & 309.8   \\ \hline
+$d_3$ /cm & 60.7    \\ \hline
+$l_0$ /cm & 17.81   \\ \hline
+$l_1$ /cm & 12.8    \\ \hline
+$L $ /cm & 519.015 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{水中の場合における測定結果}
+\label{two}
+\begin{tabular}{|l|l|}
+\hline
+$T   $/s & 19.3    \\ \hline
+$d_1$/cm & 249.6   \\ \hline
+$d_2$/cm & 309.8   \\ \hline
+$d_3$/cm & 60.7    \\ \hline
+$l_0$/cm & 17.81   \\ \hline
+$l_1$/cm & 12.8    \\ \hline
+$L   $/cm & 519.015 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{同軸ケーブルでの信号速度における測定結果}
+\label{three}
+\begin{tabular}{|l|l|}
+\hline
+$T$/s  & 10.9  \\ \hline
+$L$/cm & 103.8 \\ \hline
+\end{tabular}
+\end{table}
+
 
 \section{課題}
 
-課題
+\subsection{光速度とその不確かさ}
+式\ref{lighrningspeed}より、表\ref{one}の値を代入すると、光速度$c = 2.900 \times 10^8$m/sとなった。\\
+\par 次に光速度の不確かさを求めていく。不確かさを出すのには次の式を使用した。また、この時の$\Delta L = 0.1$,$\Delta T = 0.5$である。
+
+\begin{equation}
+    \Delta c = c\sqrt{(\frac{\Delta L}{L})^2 + (\frac{\Delta T}{T})^2}
+\end{equation}
+
+以上より、$\Delta T = 0.08 \times 10^8$m/sとなった。
+
+従ってこの実験から得られた光速度$c = 2.900 \pm 0.08 \times 10^8$m/sである。
+
+
+
+
+\subsection{水の屈折率とその不確かさ}
+水の屈折率を$n$とすると、水の屈折率は次の式で計算される。
+\begin{equation}
+    n = 1 + \frac{ct}{l}
+\end{equation}
+上式と\ref{two}の値より、水の屈折率$n = 1.68$となった。\\
+\par 次に水の屈折率の不確かさを求めていく。不確かさを出すのには次の式を利用した。また、この時の$\Delta t = 0.1$,$\Delta l = 0.1$である。
+
+\begin{equation}
+    \Delta n = (n-1)\sqrt{(\frac{\Delta t}{t})^2 + (\frac{\Delta c}{c})^2 + (\frac{\Delta l}{l})^2}
+\end{equation}
+
+上式に表\ref{two}の値を代入することにより、$\Delta n = 0.05$となった。
+
+従ってこの実験から得られた水の屈折率$n = 1.68 \pm 0.05$である。
+
+
 
 \section{考察}
 

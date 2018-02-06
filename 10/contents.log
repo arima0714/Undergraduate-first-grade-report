@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2017.11.19)  2 FEB 2018 17:39
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2017.11.19)  6 FEB 2018 14:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -135,20 +135,29 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 4.805pt on input line 18.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 25.
+(Font)              scaled to size 11.53198pt on input line 26.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 25.
+(Font)              scaled to size 11.53198pt on input line 26.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 28.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 28.
 
 [1
 
-] [2] (./contents.aux) ) 
+]
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 72.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 72.
+ [2] [3] [4] (./contents.aux) ) 
 Here is how much of TeX's memory you used:
- 663 strings out of 493642
- 7602 string characters out of 6148747
- 66992 words of memory out of 5000000
- 4311 multiletter control sequences out of 15000+600000
- 13699 words of font info for 61 fonts, out of 8000000 for 9000
+ 675 strings out of 493642
+ 7720 string characters out of 6148747
+ 69992 words of memory out of 5000000
+ 4322 multiletter control sequences out of 15000+600000
+ 14867 words of font info for 67 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 23i,7n,20p,348b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23i,9n,20p,348b,291s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on contents.dvi (2 pages, 5052 bytes).
+Output written on contents.dvi (4 pages, 10700 bytes).
