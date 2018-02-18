@@ -1,0 +1,132 @@
+\documentclass[12pt,a4j]{jarticle}
+\usepackage{graphicx}
+\usepackage{listings}
+\begin{document}
+\title{基礎プログラミングおよび演習 レポート ＃15}
+\author{1710021, 有馬海人 (ペア: 鈴木順仁・1710333,成田悠希・1710465)}
+\date{02/11}
+\maketitle
+
+\section{構想・計画・設計}
+%-- どのような構想でプログラムを企画し、プログラムはどう設計したか --%
+衝突と発散するエネルギーをアニメにしようと構想しました。\\鈴木が2つの粒子の衝突、成田が衝突した後の発散、そして有馬が二人の作成したmain関数を結合させるプログラムを作成するという計画・設計であった。
+
+
+\section{プログラムコード}
+次のプログラムはsuzuki.cという名前のものです。
+\begin{verbatim}
+    //#include "img.h"
+
+    int suzuki(void) {
+      struct color c1 = { 0, 0, 255 };
+      struct color c2 = { 255, 0, 0 };
+    //    struct color c3={(c1.r+c2.r)/2,(c1.g+c2.g)/2,(c1.b+c2.b)/2};
+      struct color c3={55,255,175};
+      for(int i = 0; i <=150; ++i) {
+        img_clear();
+        img_fillcircle(c1, i, 100, 10);
+        img_fillcircle(c2, 300-i, 100, 10);
+        img_write();
+      }
+       for(int i=0;i<=20;i=i+1){
+        img_clear();
+        img_fillcircle(c3, 150, 100, 10);
+        img_write();
+    }
+    return 0;
+    }
+\end{verbatim}
+
+次のプログラムはnarita2.cというプログラムです。
+\begin{verbatim}
+    //#include "../img.c"
+
+    int narita(void) {
+        struct color c = {55,255,175};
+        for(int i = 0; i <= 20; i++) {
+            img_clear();
+            img_fillline(c,150+10*i,100,160+10*i,100,10);
+            img_fillline(c,150-10*i,100,140-10*i,100,10);
+            img_fillline(c,150,100+10*i,150,110+10*i,10);
+            img_fillline(c,150,100-10*i,150,90-10*i,10);
+            img_fillline(c,150-10*i,100-10*i,140-10*i,90-10*i,10);
+            img_fillline(c,150+10*i,100-10*i,160+10*i,90-10*i,10);
+            img_fillline(c,150+10*i,100+10*i,160+10*i,110+10*i,10);
+            img_fillline(c,150-10*i,100+10*i,140-10*i,110+10*i,10);
+            img_write();
+        }
+    return 0;
+    }
+\end{verbatim}
+
+次のプログラムはanimate1.cという名前のものです。
+\begin{verbatim}
+    // animate1 --- create animation using img lib.
+    #include "img.c"
+    #include "suzuki.c"
+    #include "narita2.c"
+    //#include <math.h>
+    //#include "img.h"
+    
+    int narita(void);
+    int suzuki(void);
+    
+    int main(void) {
+      // struct color c1 = { 30, 255, 0 };
+      // struct color c2 = { 255, 0, 0 };
+      // for(int i = 0; i < 20; ++i) {
+      //   img_clear(); img_fillcircle(c1, 20+i*8, 100, 20); img_write();
+      // }
+      // for(int i = 0; i < 20; ++i) {
+      //   img_clear(); img_fillcircle(c2, 180, 100+i*5, 20-i); img_write();
+      // } 
+      suzuki();
+      narita();
+    
+    }
+\end{verbatim}
+
+\section{プログラムの説明}
+%-- プログラムのどの部分が何をしているかを説明する --%
+\subsection{suzuki.cについて}
+このプログラムは赤色の円と青色の円が合体し、その直後に蛍光緑になるというプログラムです。
+\subsection{narita2.cについて}
+このプログラムは先ほどの合体していたところから緑色に八つに爆散している状況を作るプログラムです。
+\subsection{animate1.cについて}
+このプログラムでは2,3,4行目ではこのプログラムを構成するにあたって重要なファイルをincludeしています。特に2,3行目では私以外の二人に作成してもらった関数の入ったファイルをincludeしています。\\
+7,8行目では私以外の二人の作成した、関数を宣言しています。\\
+11行目ではこのプログラムにおけるmain関数を定義しています。\\
+20,21行目では二人の作成した、2つの関数を実行しています。
+
+\section{生成された動画}
+%-- まずどんな動画という説明を書くこと --%
+
+%-- 動画のコマを最大2-3ていど選び説明用に貼る。--%
+%-- 絵はincludegraphics命令でPostScriptを取り込むようにする --%
+%-- PPMからは「convert img001.ppm mypicture.ps」のように変換 --%
+%-- ファイル名が正しく、また.texファイルと同じ場所にある必要 --%
+\begin{center}
+\includegraphics[width=12cm]{mypicture.ps}\\二つの円が合体しようとしているところ
+\end{center}
+
+\begin{center}
+\includegraphics[width=12cm]{mypicture1.ps}\\合体した後に散り散りになっているところ
+\end{center}
+
+\section{考察}
+%-- 考察は必須かつ重要。課題をやって分かったことや感想など。 --%
+今回の課題を行なってわかったことはチーム開発において作成したプログラムを共有する際にはどのようなプログラムを作成しているかのコメントが大事であると考察する。その理由はこのレポートを書く際にどのようなプログラムをチームメンバーが書いたのかを計画段階でしか聞いていなかったため、チームメンバーの作成したプログラムを頭の中で考える必要があったからである。\\次にわかったことはチーム開発の際にはまとめ役の人が必要であるということであると考察する。なぜならば今回のようなチーム開発の際に誰がどこを担当しているのかをしっかりと把握してまとめ上げる人物がいないとそれぞれが自由にコーディングしている状態である状態も考えることができる。これをこれをまとめる人がいるとそういったこともなく全体を俯瞰した立場の人が生まれるのでそれぞれがやりやすいのではないかと考察する。\\最後にC言語をチームで開発する際には個人的には、他の言語では行なったことのない、外部ファイルに存在している関数を呼び出すことができるという機能をC言語で利用した。これは二人の作成した、main関数となっているものをmainの部分を書き換え、それの入っているところをincludeすることで関数宣言をするだけで使えるようになるからであると考察する。\\以上より、この課題の目標である、 「チームでソフトウェアを開発する際に注意すべきことを知る。」「C 言語の機能を活用して分担してプログラムを開発する。」は達成することができたのではないかと考察する。
+
+
+\section{アンケート}
+
+\subsection{Q1：うまく分担して課題プログラムを開発できましたか。}
+%-- ここにQ1の回答を記入 --%
+分担はうまくいきました。
+\subsection{Q2：複数で分担する際に注意すべきことは何だと思いましたか。}
+%-- ここにQ2の回答を記入 --%
+それぞれがどのようなコードを書いているかの共有だと思います。
+\subsection{Q3：リフレクション(今回の課題で分かったこと)・感想・要望をどうぞ。}
+%-- ここにQ3の回答を記入 --%
+定期テストが並び替えらしく、苦手なので過去の復習問題をやり直すことで対策をしていきたいとおもいます。
+\end{document}
